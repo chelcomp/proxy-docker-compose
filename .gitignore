@@ -1,0 +1,13 @@
+# Backup files
+*.bkp*
+
+# Subfolders
+/data/*
+!/data/nginx
+/letsencrypt/
+/nextcloud/
+
+# Environment files
+.env
+
+
