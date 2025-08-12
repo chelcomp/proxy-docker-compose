@@ -57,7 +57,6 @@ The following environment variables need to be set in the `.env` file:
 
 | Variable          | Description                                                                                             |
 | ----------------- | ------------------------------------------------------------------------------------------------------- |
-| `GEMINI_API_KEY`  | Your API key for Google Gemini.                                                                         |
 | `TUNNEL_TOKEN`    | Your Cloudflare Tunnel token. You can get this from your Cloudflare dashboard when creating a new tunnel. |
 
 ### Nginx Proxy Manager
