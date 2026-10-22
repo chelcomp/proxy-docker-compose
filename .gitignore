@@ -11,3 +11,6 @@
 .env
 
 
+
+# Backups do banco do NPM
+/data_bkp/

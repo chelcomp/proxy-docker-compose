@@ -1,4 +1,3 @@
-
 services:
   cloudflared:
     image: cloudflare/cloudflared:latest
@@ -20,5 +19,15 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
-      - ./nextcloud:/var/www/html:ro
+    healthcheck:
+      test: ["CMD-SHELL", "/usr/bin/curl -sf http://localhost/ > /dev/null || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
     network_mode: host
